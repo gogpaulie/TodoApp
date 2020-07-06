@@ -48,7 +48,12 @@ class App extends React.Component {
       title,
       completed: false
     }
-    this.setState({ todos: [...this.state.todos, newTodo] });
+    if (title === '') {
+      alert('Please enter text in todo list.')
+    } else {
+      this.setState({ todos: [...this.state.todos, newTodo] });
+    }
+    
     
   }
 
